@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <!--<local:CustomControl Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="300" Width="500" ItemList="{Binding List, Mode=OneWay}" ElementCount="6" Style="{StaticResource ListViewStyle}"/>-->
+        <local:CustomControl2 Grid.Row="2" x:Name="customControl2" NumChars="2" Style="{StaticResource CustomControl2Style}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <local:CustomControl2 Grid.Row="3" x:Name="customControl2b" NumChars="5" Style="{StaticResource CustomControl2Style}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <local:CustomControl2 Grid.Row="4" x:Name="customControl2c" TextToRender="{Binding TextToRender}" NumChars="100" Style="{StaticResource CustomControl2Style}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button Grid.Row="5" Click="Button_Click_1"/>
+    </Grid>
+</Page>
